@@ -1,4 +1,4 @@
-package _05_body_part_quiz;
+  package _05_body_part_quiz;
 
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2019
@@ -21,10 +21,10 @@ public class BodyPartQuiz {
 	// package,or if you prefer, get celebrity photos from the Internet,
 	// place them in the default package, and change the names below.
 
-	String firstImage = "src/body_part_quiz/arnold.jpeg";
-	String secondImage = "src/body_part_quiz/leonardo.jpeg";
-	String thirdImage = "src/body_part_quiz/morgan.jpeg";
-	String fourthImage = "src/body_part_quiz/jack.jpeg";
+	String firstImage = "src/_05_body_part_quiz/arnold.jpeg";
+	String secondImage = "src/_05_body_part_quiz/leonardo.jpeg";
+	String thirdImage = "src/_05_body_part_quiz/morgan.jpeg";
+	String fourthImage = "src/_05_body_part_quiz/jack.jpeg";
 
 	JFrame window = new JFrame();
 	JPanel panel = new JPanel();
@@ -51,20 +51,49 @@ public class BodyPartQuiz {
 	private void startQuiz() {
 
 		// 1. Make an int variable to hold the score.
-
+		int score;
 		// 2. Set the size of the window in the initializeGui() method 
-
+		initializeGui();
 		// 4. Ask the user who this person is and store their answer
-		String guess = JOptionPane.showInputDialog("who is this?");
-
+		String guess = JOptionPane.showInputDialog("who is this person's first name?");
+		
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
-
+		if (guess.equals("arnold")) {
+			JOptionPane.showMessageDialog(null, "CORRECT!!!");	
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "INCORRECT!!! The person is arnold");
+				}
+			showNextImage();
+		    guess = JOptionPane.showInputDialog("who is this person's first name?");
+			if (guess.equals("leonardo")) {
+				JOptionPane.showMessageDialog(null, "CORRECT!!!");	
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "INCORRECT!!! The person is leonardo");
+					}
+				showNextImage();
+			    guess = JOptionPane.showInputDialog("who is this person's first name?");
+				if (guess.equals("morgan")) {
+					JOptionPane.showMessageDialog(null, "CORRECT!!!");	
+					}
+					else {
+						JOptionPane.showMessageDialog(null, "INCORRECT!!! The person is morgan");
+						}
+					showNextImage();
+				    guess = JOptionPane.showInputDialog("who is this person's first name?");
+					if (guess.equals("jack")) {
+						JOptionPane.showMessageDialog(null, "CORRECT!!!");	
+						}
+						else {
+							JOptionPane.showMessageDialog(null, "INCORRECT!!! The person is jack");
+							}
 		// 6. Otherwise:
 		// -- Tell them they are wrong and who the person is
-
+		
 		// 7. Use the showNextImage() method below to get the next image
-		showNextImage();
+		
 
 		// 8. .... repeat 4-7 for all your images.....
 
